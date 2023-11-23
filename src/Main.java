@@ -2,6 +2,11 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+        class Player {
+            String name = this.name;
+            String icon = this.icon;
+        }
+
         int rows = 3; //X
         int column = 3; //Y
         /**
@@ -24,6 +29,11 @@ public class Main {
         }
     }
 
+    public static void showGrid () {
+        for (int i = 1; i <= 3; i++) {
+            System.out.println(" - - -");
+        }
+    }
     public static void render(int row, int column, String icon) {
         for (int i = 1; i <= 3; i++) { //Row
             for (int j = 1; j <= 3; j++) {
