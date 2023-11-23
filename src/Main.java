@@ -1,10 +1,31 @@
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+
         class Player {
             String name = this.name;
             String icon = this.icon;
+        }
+        Player player1 = new Player();
+        Player player2 = new Player();
+
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Gib den Namen vom ersten Spieler ein");
+            player1.name = scanner.nextLine();
+            System.out.println("Gib den Namen vom zweiten Spieler ein");
+            player2.name = scanner.nextLine();
+            System.out.println("Namen: Spieler1 : " + player1.name + " Spieler2 : " + player2.name);
+            System.out.println("Gib das Zeichen von Spieler 1 ein");
+            player1.icon = scanner.nextLine();
+            System.out.println("Gib das Zeichen von Spieler 2 ein");
+            player2.icon = scanner.nextLine();
+            System.out.println("Icons Player1 & 2: " + player1.icon + " " + player2.icon);
+        } catch (Exception e) {
+            System.out.println("Fehler. Versuche es erneut! " + e);
         }
 
         int rows = 3; //X
